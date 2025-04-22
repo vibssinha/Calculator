@@ -1,0 +1,59 @@
+<html>
+
+<head>
+  <title>Calculator</title>
+  <script>
+    function add() {
+      let x = document.getElementById("FirstNumber").value;
+      let y = document.getElementById("SecondNumber").value;
+      document.getElementById("answer").textContent = x + " + " + y + " = " + (parseFloat(x) + parseFloat(y))
+    }
+    function multiply(){
+      let x = document.getElementById("FirstNumber").value;
+      let y = document.getElementById("SecondNumber").value;
+      document.getElementById("answer").textContent = x + " * " + y + " = " + (parseFloat(x) * parseFloat(y))
+    }
+
+    function subtract(){
+      let x = document.getElementById("FirstNumber").value;
+      let y = document.getElementById("SecondNumber").value;
+      document.getElementById("answer").textContent = x + " - " + y + " = " + (parseFloat(x) - parseFloat(y))
+    }
+
+    function divide(){
+      let x = document.getElementById("FirstNumber").value;
+      let y = document.getElementById("SecondNumber").value;
+      document.getElementById("answer").textContent = x + "/" + y + " = " + (parseFloat(x) / parseFloat(y))
+    }
+  </script>
+  <style>
+    body{
+      justify-content: center;
+      align-items: center;
+    }
+    button:hover{
+      color: white;
+      background-color: black;
+    }
+  </style>
+</head>
+
+
+<body>
+  <label for="FirstNumber">First Number</label>
+  <input type="text" id="FirstNumber" placeholder="Enter Number">
+  <p> + </p>
+  <label for="SecondNumber">Second Number</label>
+  <input type="text" id="SecondNumber" placeholder="Enter Number">
+  <br>
+  <br>
+  <button onclick="add()">Add</button>
+  <button onclick="subtract()">Subtract</button>
+  <button onclick="multiply()">Multiply</button>
+  <button onclick="divide()">Divide</button>
+  <br>
+  <br>
+  <p id=answer></p>
+</body>
+
+</html>
